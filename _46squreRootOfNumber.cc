@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int squreRoot(int x){
+int squareRoot(int x){
     int start=0,end=x,ans=-1;
     while(start<=end){
         long long int mid=start+(end-start)/2;
@@ -25,6 +25,6 @@ int squreRoot(int x){
 
 int main(){
     int num=68;
-    int result=squreRoot(num);
-    cout<<"Squre root of "<<num<<"is : "<<result;
+    int result=squareRoot(num);
+    cout<<"Square root of "<<num<<"is : "<<result;
 }
