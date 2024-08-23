@@ -9,7 +9,7 @@ int findPivotIndex(int arr[],int size){
     }
     while(start<=end){
     mid=start+(end-start)/2;
-    if(mid<arr[mid-1]){
+    if(arr[mid]<arr[mid-1]){
         return mid-1;
     }
     else if(arr[mid]>arr[mid+1]){
