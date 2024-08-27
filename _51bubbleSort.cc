@@ -8,7 +8,7 @@ void print(vector<int> &v){
     }
 }
 
-void bubbleSort(vector<int> &v){
+void bubbleSortIncreasing(vector<int> &v){
     int n=v.size();
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-1-i;j++){
@@ -19,9 +19,24 @@ void bubbleSort(vector<int> &v){
     }
 }
 
+void bubbleSortDecreasing(vector<int> &v){
+    int n=v.size();
+    for(int i=0;i<n-1;i++){
+        for(int j=n-1;j>=0;j--){
+            if(v[j]>v[j-1]){
+                swap(v[j],v[j-1]);
+            }
+        }
+    }
+}
+
 int main(){
     vector<int> v={5,4,3,2,1};
     cout<<"print after bubble sort : "<<endl;
-    bubbleSort(v);
+    bubbleSortIncreasing(v);
     print(v);
+    cout<<endl;
+    bubbleSortDecreasing(v);
+    print(v);
+
 }
