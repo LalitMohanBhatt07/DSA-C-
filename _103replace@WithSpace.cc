@@ -4,7 +4,7 @@ using namespace std;
 
 void replaceCharacter(char ch[],int n){
     int index=0;
-    while(ch[index]!='\0'){
+    while(ch[index]!='\0'){`
         if(ch[index]=='@'){
             ch[index]=' ';
         }
