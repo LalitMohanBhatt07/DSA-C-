@@ -1,4 +1,4 @@
-#include<iostream.h>
+#include<iostream>
 #include<string.h>
 using namespace std;
 bool checkPalindrome(char ch[],int n){
