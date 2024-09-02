@@ -25,6 +25,6 @@ int main(){
         cout<<"String is palindrone";
     }
     else{
-        cout<<"String is not palindrone";
+        cout<<"String is not palindrome";
 }
 }
