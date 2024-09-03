@@ -27,5 +27,5 @@ int main(){
     vector<int>v={5,4,3,2,1};
 
     insertionSort(v);
-    print(v)
+    print(v);
 }
