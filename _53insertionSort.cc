@@ -26,6 +26,6 @@ void insertionSort(vector<int> &v){
 int main(){
     vector<int>v={5,4,3,2,1};
 
-    insertionSort(v);
+    insertionSort(v)
     print(v);
 }
