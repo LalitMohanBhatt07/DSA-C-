@@ -69,7 +69,7 @@ void print(Node *head)
 }
 
 
-
+//insert at middle
 void insertAtPosition(int data,int position,Node* &head,Node* &tail){
     int length=findLength(head);
     if(position==1){
