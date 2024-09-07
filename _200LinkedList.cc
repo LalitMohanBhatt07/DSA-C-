@@ -164,3 +164,5 @@ int main()
     print(head);
 
 }
+
+//completed singly linked list;
