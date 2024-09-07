@@ -98,6 +98,57 @@ void insertAtPosition(int data,int position,Node* &head,Node* &tail){
     }
 }
 
+
+void deleteNode(Node* &head, Node* &tail, int position){
+
+    int length=findLength(head);
+    if(head==NULL){
+        cout<<"Cannot delete because Linked List is empty";
+    }
+
+    if(head==tail){
+        Node* temp=head;
+        delete temp;
+        head=NULL;
+        tail=NULL;
+        return;
+    }
+
+    if(position==1){
+        //delete first Node
+        Node* temp=head;
+        head=temp->next;
+        temp->next=NULL;
+        delete temp;
+    }
+    else if(position==length){
+        //delete last Node
+        Node* prev=head;
+        while(prev->next!=NULL){
+            prev=prev->next;
+            prev->next=NULL;
+            delete tail;
+            tail=prev;
+        }
+    }
+    else{
+        //delete element form middle
+        Node* prev=NULL;
+        Node* curr=head;
+
+        while(position!=1){
+            position--;
+            prev=curr;
+            curr=curr->next;
+        }
+
+        prev->next=curr->next;
+
+        curr->next=NULL;
+
+        delete curr;
+    }
+}
 int main()
 {
     Node *head = NULL;
