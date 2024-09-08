@@ -43,5 +43,15 @@ void deleteNode(Node* head, Node* tail, int position){
         return;
     }
 
+    int len=findLength(head);
+
+    if(position==1){
+        Node* temp=head;
+        head=temp->next;
+        temp->next=NULL;
+        head->prev=NULL;
+        delete temp;
+    }
+
 
 }
