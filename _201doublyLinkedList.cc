@@ -62,4 +62,9 @@ void deleteNode(Node* head, Node* tail, int position){
         tail->prev=NULL;
         delete tail;
         tail=prevNode;
+    }
+        else{
+            
+
+        }
 }
