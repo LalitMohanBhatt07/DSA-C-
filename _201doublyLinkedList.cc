@@ -53,5 +53,13 @@ void deleteNode(Node* head, Node* tail, int position){
         delete temp;
     }
 
-
+    else if(position==len){
+        Node* prevNode =head;
+        while(prevNode->next!=NULL){
+            prevNode=prevNode->next;
+        }
+        prevNode->next=NULL;
+        tail->prev=NULL;
+        delete tail;
+        tail=prevNode;
 }
