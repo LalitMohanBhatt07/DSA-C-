@@ -18,3 +18,11 @@ class Node{
         this->next=NULL;
     }
 };
+
+void print(Node* head){
+    Node* temp=head;
+    while(head!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
