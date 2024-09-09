@@ -26,3 +26,12 @@ void print(Node* head){
         temp=temp->next;
     }
 }
+
+void findLength(Node* head){
+    int len=0;
+    Node* temp=head;
+    while(temp!=NULL){
+        temp=temp->next;
+        len++;
+    }
+}
