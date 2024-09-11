@@ -168,5 +168,5 @@ int main(){
     deleteNode(head,tail,3);
 
     print(head);
-    /
+    // cout<<len<<endl;
 }
