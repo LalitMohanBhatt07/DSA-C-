@@ -107,6 +107,14 @@ void deleteNode(Node* &head, Node* &tail,int position){
         return;
     }
 
+    if(head==tail){
+        Node* temp=head;
+        delete temp;
+        head=NULL;
+        tail=NULL;
+        return;
+    }
+
     if(position==1){
         Node* temp=head;
         head=head->next;
@@ -123,7 +131,20 @@ void deleteNode(Node* &head, Node* &tail,int position){
         tail=prevNode;
     }
     else{
-        
+         Node* prevNode=NULL;
+         Node* currNode=head;
+
+         while(position!=1){
+            position--;
+            prevNode=currNode;
+            currNode=currNode->next;
+         }
+
+         prevNode->next=currNode->next;
+         currNode->prev=NULL;
+         currNode->next->prev=prevNode;
+         currNode->next=NULL;
+         delete currNode;
     }
 }
 
@@ -144,5 +165,8 @@ int main(){
     int len=findLength(head);
     deleteNode(head,tail,len);
 
+    deleteNode(head,tail,3);
+
     print(head);
+    /
 }
