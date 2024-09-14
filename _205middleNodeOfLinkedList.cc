@@ -47,5 +47,11 @@ void printMiddleNode(Node* &head){
 }
 
 int main(){
-
+    Node* head=NULL;
+    insertAtHead(head,10);
+    insertAtHead(head,20);
+    insertAtHead(head,30);
+    insertAtHead(head,40);
+    insertAtHead(head,50);
+    printMiddleNode(head);
 }
