@@ -11,6 +11,18 @@ class Node{
     }
 };
 
+void insertAtHead(Node* &head,int data){
+    if(head==NULL){
+        Node* newNode=new Node(data);
+        head=newNode;
+    }
+    else{
+        Node* newNode=new Node(data);
+        newNode->next=head;
+        head=newNode;
+    }
+}
+
 int getLength(Node* &head){
     int length=0;
     Node* temp=head;
@@ -19,6 +31,19 @@ int getLength(Node* &head){
         temp=temp->next;
     }
     return length;
+}
+
+void printMiddleNode(Node* &head){
+    int length=getLength(head);
+    int position=length/2+1;
+    int currPos=1;
+
+    Node* temp=head;
+    while(currPos!=position){
+        temp=temp->next;
+        currPos++;
+    }
+    cout<<temp->data<<endl;
 }
 
 int main(){
