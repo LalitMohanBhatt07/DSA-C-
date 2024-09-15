@@ -46,6 +46,21 @@ void printMiddleNode(Node* &head){
     cout<<temp->data<<endl;
 }
 
+
+void printMiddleNodeUsingTortoiseApproach(Node* &head){
+    Node* slow=head;
+    Node* fast=head;
+
+    while(fast!=NULL){
+        fast=fast->next;
+        if(fast!=NULL){
+           fast=fast->next;
+           slow=slow->next;
+        }
+    }
+
+    cout<<"Middle Node : "<<slow->data<<endl;
+}
 int main(){
     Node* head=NULL;
     insertAtHead(head,10);
@@ -54,5 +69,7 @@ int main(){
     insertAtHead(head,40);
     insertAtHead(head,50);
     printMiddleNode(head);
+
+    printMiddleNodeUsingTortoiseApproach(head);
     //
 }
