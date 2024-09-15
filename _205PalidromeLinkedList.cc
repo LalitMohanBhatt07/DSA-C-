@@ -35,7 +35,7 @@ Node* findMiddleNode(Node* head){
     return slow;
 }
 
-void reverseLinkedList(Node* &head){
+Node* reverseLinkedList(Node* &head){
     Node* prev=NULL;
     Node* curr=head;
 
@@ -45,7 +45,20 @@ void reverseLinkedList(Node* &head){
         prev=curr;
         curr=curr->next;
     }
-    head=prev;
+    return prev;
+}
+
+bool compareList(Node* head1, Node* head2){
+    while(head1!=NULL && head2!=NULL){
+        if(head1->data != head2->data){
+            return false;
+        }
+        else{
+            head1=head1->next;
+            head2=head2->next;
+        }
+    }
+    return true;
 }
 
 bool isPalindrome(Node* head){
@@ -55,11 +68,12 @@ bool isPalindrome(Node* head){
     midNode->next=NULL;
 
     //reverse second half
-    Node* prev=NULL;
-    Node* curr=head2;
+    head2=reverseLinkedList(head2);
 
 
     //compare with first half
+    bool ans=compareList(head,head2);
+    return ans;
 }
 
 void insertAtHead(Node* &head, int data){
@@ -84,6 +98,14 @@ insertAtHead(head, 2);
 insertAtHead(head, 1);
 
 printLinkedList(head);
+
+bool ans=isPalindrome(head);
+if(ans==true){
+    cout<<"Linked list is palindrome";
+}
+else{
+    cout<<"Linked list is not palindrome";
+}
 
 
 } 
