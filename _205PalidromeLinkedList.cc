@@ -21,7 +21,7 @@ void printLinkedList(Node* head){
     }
 }
 
-int findMiddleNode(Node* head){
+Node* findMiddleNode(Node* head){
     Node* slow=head;
     Node* fast=head;
 
@@ -32,12 +32,33 @@ int findMiddleNode(Node* head){
             slow=slow->next;
         }
     }
-    return slow->data;
+    return slow;
+}
+
+void reverseLinkedList(Node* &head){
+    Node* prev=NULL;
+    Node* curr=head;
+
+    while(curr!=NULL){
+        Node* next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=curr->next;
+    }
+    head=prev;
 }
 
 bool isPalindrome(Node* head){
     //break into 2 halves
+    Node* midNode=findMiddleNode(head);
+    Node* head2=midNode->next;
+    midNode->next=NULL;
+
     //reverse second half
+    Node* prev=NULL;
+    Node* curr=head2;
+
+
     //compare with first half
 }
 
@@ -64,6 +85,5 @@ insertAtHead(head, 1);
 
 printLinkedList(head);
 
-int middleElement=findMiddleNode(head);
-cout<<"middle element : "<<middleElement;
+
 } 
