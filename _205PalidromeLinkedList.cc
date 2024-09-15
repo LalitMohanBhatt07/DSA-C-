@@ -106,6 +106,6 @@ if(ans==true){
 else{
     cout<<"Linked list is not palindrome";
 }
-
+//
 
 } 
