@@ -43,7 +43,7 @@ Node* reverseLinkedList(Node* &head){
         Node* next=curr->next;
         curr->next=prev;
         prev=curr;
-        curr=curr->next;
+        curr=next;
     }
     return prev;
 }
