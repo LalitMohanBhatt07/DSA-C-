@@ -31,5 +31,6 @@ bool hasCycle(Node* head){
 }
 
 int main(){
-    hasbool(head);
+    Node* head=NULL;
+    bool ans=hasCycle(head);
 }
