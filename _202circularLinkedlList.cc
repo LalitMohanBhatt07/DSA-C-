@@ -37,5 +37,5 @@ void insertAtHead(Node* &head, int data){
 
 int main(){
     Node* head=NULL;
-insertAtHead(20);
+
 }
