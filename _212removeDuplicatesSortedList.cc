@@ -59,5 +59,6 @@ void deleteDuplication(Node* &head){
 }
 
 int main(){
-    
+    Node* head=NULL;
+    insertAtHead(head,10);
 }
