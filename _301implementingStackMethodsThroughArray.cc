@@ -15,7 +15,14 @@ class Stack{
 
     void push(int data){
     top++;
-    arr[top]=data;}
+    arr[top]=data;
+
+    }
+
+    void pop(){
+        top--;
+        
+    }
 
 };
 
