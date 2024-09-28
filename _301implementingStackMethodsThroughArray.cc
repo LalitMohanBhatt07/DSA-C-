@@ -21,7 +21,15 @@ class Stack{
 
     void pop(){
         top--;
-        
+    }
+
+    bool isEmpty(){
+        if(top==-1){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
 };
