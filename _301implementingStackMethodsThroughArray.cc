@@ -32,6 +32,10 @@ class Stack{
         }
     }
 
+    int getTop(){
+        return arr[top];
+    }
+
 };
 
 
