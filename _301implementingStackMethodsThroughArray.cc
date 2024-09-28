@@ -36,6 +36,10 @@ class Stack{
         return arr[top];
     }
 
+    int getSize(){
+        return top+1;
+    }
+
 };
 
 
