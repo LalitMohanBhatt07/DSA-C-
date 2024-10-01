@@ -11,4 +11,5 @@ int pow(int num){
 
 int main(){
     cout<<pow(10);
+    cout<<pow(5);
 }
