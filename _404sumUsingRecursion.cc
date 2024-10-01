@@ -11,4 +11,5 @@ int sum(int n){
 
 int main(){
     cout<<sum(4);
+    cout<<sum(5);
 }
