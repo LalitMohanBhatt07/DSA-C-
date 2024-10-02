@@ -34,7 +34,7 @@ void insertAtHead(Node* &head, int data){
         head=newNode;
     }
 }
-//
+
 
 int main(){
     Node* head=NULL;
